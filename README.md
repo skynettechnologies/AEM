@@ -1,140 +1,70 @@
-# All in One Accessibility®
+# **All in One Accessibility for Adobe Experience Manager**
 
-## Enhance Your Website's Accessibility with All in One Accessibility®
+AEM Accessibility widget helps organizations improve digital accessibility across AEM-powered websites without complex development changes. The solution integrates seamlessly with AEM to enhance usability for people with disabilities while supporting WCAG 2.0, 2.1, 2.2 guidelines, ADA, EAA, and Section 508 compliance, California Unruh, France RGAA, European EAA EN 301 549, UK Equality Act (EA), Spain UNE 139803:2012, Australian DDA, Israeli Standard 5568, Ontario AODA, Canada ACA, German BITV, Brazilian Inclusion Law (LBI 13.146/2015), JIS X 8341 (Japan), Italian Stanca Act, Indian RPwD Act, Switzerland DDA and other web accessibility standards.
 
-**Did you know?** Your website's accessibility can make or break your audience's experience. With the **All in One Accessibility AI Widget**, you can instantly boost your site's inclusivity and support over **140+ languages**! Experience the power of **70 advanced features** and take the first step towards creating a better web for everyone.
+Built to support users with hearing, visual, motor, color blind, dyslexia, cognitive, ADHD impairments, it provides a broad suite of assistive features that help improve accessibility compliance and overall user experience. Designed for enterprise and public-sector environments, the platform provides accessibility support at scale - helping teams address common accessibility gaps efficiently across templates, components, and published pages.
 
-### Why All in One Accessibility®?
+## **Comprehensive Features**
 
-This lightweight and flexible widget is designed to improve your website’s compliance with international accessibility standards, including:
+Includes assistive features such as:
 
-- **ADA (Americans with Disabilities Act)**
-- **WCAG 2.0, 2.1, & 2.2**
-- **Section 508 (U.S. Government Standard)**
-- **California Unruh Act**
-- **Australian DDA**
-- **European EAA EN 301 549**
-- **UK Equality Act (EA)**
-- **Israel Standard 5568**
-- **Ontario AODA**
-- **Canada ACA**
-- **UAE Disability Act**
-- **Singapore DSS and SGDS**
-- For more details on Accessibility Standards, Visit **[All in One Accessibility Supported Standards.](https://www.skynettechnologies.com/accessibility-standards)**
+- AI based Screen Reader and alternate text remediation
+- 140+ multi languages support
+- Voice Navigation, Keyboard Navigation, Talk & Type, Color Blindness, Libras Sign Language (Brazilian Portuguese only), Dictionary, Content, Color, Contrast, and Orientation Adjustments, Virtual Keyboard utilities.
+- Customizable UI for widget size, position, widget icon size, icon type, color, widget open / close sound preferences as per your website look and feel.
+- Google Analytics and Adobe Analytics Integration
+- Set default language, Multiple custom trigger, Accessibility Statement link integration.
+- Dedicated email support
 
-By implementing the widget, you’re not only enhancing user experience but also minimizing the risk of costly accessibility lawsuits. For more details, visit **[All in One Accessibility®.](https://www.skynettechnologies.com/all-in-one-accessibility)**
+## **Personalized User Options**
 
-### Built for Excellence
+Users can select from pre-set accessibility profiles (color blind, blind, visually impaired, motor impaired, dyslexia, learning and cognitive, seizure & epileptic, ADHD, elderly).
 
-- Adheres to **ISO 9001:2015** & **ISO 27001:2013** standards.
-- Fully compliant with **GDPR** and **COPPA** regulations.
-- Proud member of **W3C** and the **International Association of Accessibility Professionals (IAAP)**.
+## **Automated Scoring and Scan Report**
 
-**Your website’s accessibility journey begins here. Make an impact.**
+Get actionable insights on accessibility performance with built-in dashboard that show accessibility scores and violations so teams can continuously improve.
 
-For more details, visit **[All in One Accessibility®](https://www.skynettechnologies.com/all-in-one-accessibility)** and transform your digital presence.
+## **Easy Installation & Integration**
 
-### Supported Languages (140+ Languages):
+Designed for quick deployment on Adobe Experience Manager websites. Integration is streamlined to work natively within the AEM environment without significant impact on site performance.
 
-English (USA), English (UK), English (Australian), English (Canadian), English (South Africa), Español, Español (Mexicano), Deutsch, عربى, Português, Português (Brazil), 日本語, Français, Italiano, Polski, Pусский, 中文, 中文 (Traditional), עִברִית, Magyar, Slovenčina, Suomenkieli, Türkçe, Ελληνικά, Latinus, Български, Català, Čeština, Dansk, Nederlands, हिंदी, Bahasa Indonesia, 한국인, Lietuvių, Bahasa Melayu, Norsk, Română, Slovenščina, Svenska, แบบไทย, Українська, Việt Nam, বাঙালি, සිංහල, አማርኛ, Hmoob, မြန်မာ, Eesti keel, latviešu, Cрпски, Hrvatski, ქართული, ʻŌlelo Hawaiʻi, Cymraeg, Cebuano, Samoa, Kreyòl ayisyen, Føroyskt, Crnogorski, Azerbaijani, Euskara, Tagalog, Galego, Norsk Bokmål, فارسی, ਪੰਜਾਬੀ, shqiptare, Hայերեն, অসমীয়া, Aymara, Bamanankan, беларускі, bosanski, Corsu, ދިވެހި, Esperanto, Eʋegbe, Frisian, guarani, ગુજરાતી, Hausa, íslenskur, Igbo, Gaeilge, basa jawa, ಕನ್ನಡ, қазақ, ខ្មែរ, Kinyarwanda, Kurdî, Кыргызча, ພາສາລາວ, Lingala, Luganda, lëtzebuergesch, македонски, Malagasy, മലയാളം, Malti, Maori, मराठी, Монгол, नेपाली, Sea, ଓଡିଆ, Afaan Oromoo, پښتو, Runasimi, संस्कृत, Gàidhlig na h-Alba, Sesotho, Shona, سنڌي, Soomaali, basa Sunda, kiswahili, тоҷикӣ, தமிழ், Татар, తెలుగు, ትግሪኛ, Tsonga, Türkmenler, Ride, اردو, ئۇيغۇر, o'zbek, isiXhosa, יידיש, Yoruba, Zulu, भोजपुरी, डोगरी, कोंकणी, Kurdî, Krio, मैथिली, Meiteilon, Mizo tawng, Sepedi, Ilocano, دری.
+## **Scalable for Enterprise and Public-Sector Use**
 
-## Setup
+Whether managing a single AEM site or a large multi-site environment, AEM accessibility widget supports consistent accessibility experiences across domains and content updates. This makes it well-suited for government agencies, higher education institutions, and enterprises using Adobe Experience Manager as their core CMS.
 
-- Populate the `.env` file in the project root and fill it as shown [below](#env)
+## **Optional Add-ons**
 
-## Local Dev
+Manual accessibility audit, manual accessibility remediation, PDF/document remediation, VPAT/ACR reporting, white-label branding, live website translations, modify accessibility menu - for complete compliance.
 
-- `aio app run` to start your local Dev server
-- App will run on `localhost:9080` by default
+## **Benefits**
 
-By default the UI will be served locally but actions will be deployed and served from Adobe I/O Runtime. To start a
-local serverless stack and also run your actions locally use the `aio app run --local` option.
-## Config
+- By enhancing AEM site's accessibility, reduce exposure to accessibility-related litigation and align digital experiences with legal mandates across regions.
+- Designed for modern enterprise platforms like AEM, the solution integrates with no performance impact so the site remains fast and responsive.
+- Supports AEM multisite architectures.
+- Whether you operate AEM on-premises or in the Adobe Cloud Service, this solution adapts to setup to enhance accessibility across all digital experiences.
 
-### `.env`
+## **Who should use this app?**
 
-You can generate this file using the command `aio app use`. 
+- AEM Developers & Digital Teams: Looking to add accessibility features without any complext coding.
+- Content Authors & Editors: Want to offer accessible content experiences.
+- Organizations & Enterprises: Needing to improve accessibility compliance and inclusive access for diverse audiences.
 
-```bash
-# This file must **not** be committed to source control
+## **Security and Privacy notes**
 
-## please provide your Adobe I/O Runtime credentials
-# AIO_RUNTIME_AUTH=
-# AIO_RUNTIME_NAMESPACE=
-```
+- The AEM accessibility module follows several data and application security practices, including ISO 9001:2015 & ISO 27001:2013, GDPR, CCPA, COPPA, HIPAA, and SOC 2 Type II.
+- Skynet Technologies USA LLC is an organizational member of IAAP and of W3C.
+- This helps to maintain accessibility features while respecting privacy, data protection, and security expectations required in many U.S. and international sectors such as healthcare, education, and public services.
+- No personal data is intentionally stored by the module itself.
+- Site owners are responsible for reviewing their own compliance requirements.
 
-### `app.config.yaml`
+## **Support & Resources**
 
-- Main configuration file that defines an application's implementation. 
-- More information on this file, application configuration, and extension configuration 
-  can be found [here](https://developer.adobe.com/app-builder/docs/guides/appbuilder-configuration/#appconfigyaml)
-
-## CORS Policy Configuration
-
-To avoid CORS policy issues, ensure the following URLs are allowed in your website. These URLs should be added to your CORS configuration or trusted domains list.
-
-| **Domain**                        | **Description**                              | **Usage**                        |
-|-----------------------------------|----------------------------------------------|----------------------------------|
-| `https://*.skynettechnologies.com` | Skynet Technologies (Global Domain)         | API access and resources        |
-| `https://*.skynettechnologies.us` | Skynet Technologies (US Domain)             | API access and resources        |
-| `https://*.googleapis.com`        | Google APIs                                 | Services like Fonts, Translation |
-| `https://vlibras.gov.br`          | VLibras - Brazilian Sign Language Service   | Sign Language             |
-
-## Instructions
-
-1. Update your server's CORS configuration to include these URLs.
-2. Ensure wildcard subdomains (`*`) are supported where necessary.
-3. Verify the application functionality by testing requests to these domains.
-4. If issues persist, consult the documentation for CORS configuration guidance.
-
-## Documentation
-
+- Installation guidance and technical support are provided via email.
 - [Purchase AEM All in One Accessibility](https://www.skynettechnologies.com/adobe-experience-manager-website-accessibility)
 - [How to install All in One Accessibility Addon on AEM](https://www.skynettechnologies.com/blog/adobe-experience-manager-web-accessibility-widget-installation)
 - [All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)
 
-## Submit a Support Request
 
-Please visit our **[support page](https://www.skynettechnologies.com/report-accessibility-problem)** and fill out the form. Our team will get back to you as soon as possible.
-
-## Send Us an Email
-
-Alternatively, you can send an email to our support team:
-**[hello@skynettechnologies.com](mailto:hello@skynettechnologies.com)**
-
-## Accessibility Partnership Opportunities
-
-#### **[Agencies Partnership](https://www.skynettechnologies.com/agency-partners)**
-
-Partner with us as an agency to provide comprehensive accessibility solutions to your clients. Get access to exclusive resources, training, and support to help you implement and manage accessibility features effectively.
-
-#### **[Affiliated Partnership](https://www.skynettechnologies.com/affiliate-partner)**
-
-Join our affiliate program and earn commissions by promoting All in One Accessibility™. Share our Widget with your network and help businesses improve their website accessibility while generating revenue.
-
-For more details, Please visit **[Partnership Opportunities Page](https://www.skynettechnologies.com/partner-program)**
-
-## Screenshots
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-1.jpg?v=2)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-2.jpg?v=2)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-3.jpg?v=2)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-4.jpg?v=2)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-5.jpg?v=2)
-
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-6.jpg?v=2)
-
-## Video
-
-[![All in One Accessibility](https://img.youtube.com/vi/I-DjgZyleeI/0.jpg)](https://www.youtube.com/watch?v=I-DjgZyleeI)
-
-## Credits
-
-This addon is developed and maintained by [Skynet Technologies USA LLC](https://www.skynettechnologies.com)
-
-## Current Maintainers
-- [Skynet Technologies USA LLC](https://github.com/skynettechnologies)
+For more information, please visit:
+<https://www.skynettechnologies.com/all-in-one-accessibility>
+<https://www.skynettechnologies.com/adobe-experience-manager-website-accessibility>

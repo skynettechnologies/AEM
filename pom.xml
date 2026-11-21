@@ -8,7 +8,7 @@
     <groupId>com.skynettechnologies.aem</groupId>
     <artifactId>aioa</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>All in One Accessibility - Reactor</name>
     <description>All in One Accessibility settings console and widget for AEM</description>
 

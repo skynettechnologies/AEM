@@ -1,0 +1,64 @@
+<!--/*
+  Settings > Widget position: a 3 x 3 grid of preset positions. The center cell is a mini website
+  whose icon moves to the selected position (js/settings-form.js, data-gx / data-gy).
+  With "Set an exact position" checked, exact offsets in pixels are used instead.
+*/-->
+<section class="aioa-card" aria-labelledby="position-title" data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel">
+    <h2 id="position-title">Widget position</h2>
+    <p class="aioa-desc">Where the accessibility icon appears on your website.</p>
+
+    <!-- Preset grid <-> exact offsets -->
+    <label class="aioa-check">
+        <input type="checkbox" id="custom-position-switcher" aria-controls="custom-position-controls position_html"/>
+        Set an exact position in pixels
+    </label>
+
+    <!-- Preset positions -->
+    <fieldset class="aioa-fieldset widget-position" id="position_html">
+        <legend class="visually-hidden">Widget icon position</legend>
+        <div class="aioa-pos-grid">
+            <sly data-sly-list.pos="${model.positions}">
+                <!-- Center cell: mini website with the icon at the selected position -->
+                <div class="aioa-pos-center" aria-hidden="true" data-sly-test="${pos.center}">
+                    <span class="aioa-mini-label">Your website</span>
+                    <span class="aioa-mini-widget" id="mini-widget" style="--gx:1;--gy:1"><img class="iconimg" src="${model.iconBase}aioa-icon-type-1.svg" alt=""/></span>
+                </div>
+                <div class="aioa-pos-option" data-sly-test="${!pos.center}">
+                    <input type="radio" class="aioa-radio" id="${pos.id}" name="position" value="${pos.value}" data-gx="${pos.gx}" data-gy="${pos.gy}" checked="${pos.checked}"/>
+                    <label for="${pos.id}" class="aioa-pos-label">
+                        <span class="aioa-glyph" style="--gx:${pos.gx @ context='styleToken'};--gy:${pos.gy @ context='styleToken'}" aria-hidden="true"><i></i></span>
+                        ${pos.label}
+                    </label>
+                </div>
+            </sly>
+        </div>
+    </fieldset>
+
+    <!-- Exact offsets (0 - 250 px) -->
+    <div class="aioa-subpanel custom-position-controls" id="custom-position-controls" hidden>
+        <div class="aioa-offset-row">
+            <label class="aioa-label" for="custom_position_x_value">Horizontal</label>
+            <div class="aioa-affix" data-for="custom_position_x_value">
+                <input type="number" min="0" max="250" step="1" inputmode="numeric" id="custom_position_x_value" value="0" aria-describedby="pos-range-hint pos-error"/>
+                <span class="aioa-affix-text" aria-hidden="true">px</span>
+            </div>
+            <select class="aioa-select" id="custom_position_x_dir" aria-label="Horizontal direction">
+                <option selected value="cust-pos-to-the-right">To the right</option>
+                <option value="cust-pos-to-the-left">To the left</option>
+            </select>
+        </div>
+        <div class="aioa-offset-row">
+            <label class="aioa-label" for="custom_position_y_value">Vertical</label>
+            <div class="aioa-affix" data-for="custom_position_y_value">
+                <input type="number" min="0" max="250" step="1" inputmode="numeric" id="custom_position_y_value" value="0" aria-describedby="pos-range-hint pos-error"/>
+                <span class="aioa-affix-text" aria-hidden="true">px</span>
+            </div>
+            <select class="aioa-select" id="custom_position_y_dir" aria-label="Vertical direction">
+                <option selected value="cust-pos-to-the-lower">To the bottom</option>
+                <option value="cust-pos-to-the-upper">To the top</option>
+            </select>
+        </div>
+        <p class="aioa-hint" id="pos-range-hint">0 - 250px are permitted values</p>
+        <p class="aioa-error" id="pos-error" hidden></p>
+    </div>
+</section>

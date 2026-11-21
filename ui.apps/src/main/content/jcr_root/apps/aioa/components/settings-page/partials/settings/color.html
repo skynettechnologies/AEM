@@ -1,0 +1,35 @@
+<!--/*
+  Settings > Widget color: native color picker + hex field + preset colors. The "Live preview" chip
+  and the icon previews further down take the chosen color (--widget-color).
+*/-->
+<section class="aioa-card" aria-labelledby="color-title" data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel">
+    <div class="aioa-card-head">
+        <div>
+            <h2 id="color-title">Widget color</h2>
+            <p class="aioa-desc">Pick a color or enter a hex code.</p>
+        </div>
+        <!-- Live preview: the widget button in the chosen color and icon type -->
+        <div class="aioa-live" aria-hidden="true">
+            <span class="aioa-live-icon"><img class="iconimg" src="${model.iconBase}aioa-icon-type-1.svg" alt=""/></span>
+            <span class="aioa-live-text">Live<br>preview</span>
+        </div>
+    </div>
+
+    <!-- Picker + hex code + reset -->
+    <div class="aioa-color-row">
+        <input type="color" class="aioa-swatch" id="colorpicker" value="${model.defaultColorLower}" aria-label="Open color picker"/>
+        <div class="aioa-affix aioa-hex" data-for="colorcode">
+            <span class="aioa-affix-text" aria-hidden="true">#</span>
+            <input type="text" name="colorcode" id="colorcode" value="${model.defaultColor}" maxlength="7" spellcheck="false" autocomplete="off" aria-label="Hex color code" aria-describedby="colorcode-hint colorcode-error"/>
+        </div>
+        <button type="button" class="aioa-btn" id="color-reset">Reset</button>
+    </div>
+    <p class="aioa-hint" id="colorcode-hint">For example: FF5733</p>
+    <p class="aioa-error" id="colorcode-error" hidden>Enter a valid hex color code, for example FF5733.</p>
+
+    <!-- Presets -->
+    <div class="aioa-presets" role="group" aria-label="Preset colors">
+        <button data-sly-repeat.color="${model.presetColors}" type="button" class="aioa-preset" style="--c:${color.color @ context='styleToken'}"
+            data-color="${color.hex}" aria-pressed="false" aria-label="${color.ariaLabel}" title="${color.name}"></button>
+    </div>
+</section>

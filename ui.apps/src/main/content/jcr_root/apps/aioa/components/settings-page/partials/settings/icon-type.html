@@ -1,0 +1,18 @@
+<!--/* Settings > Icon type: the icon visitors click to open the widget (aioa-icon-type-1 ... 29), in the chosen color. */-->
+<section class="aioa-card" aria-labelledby="icon-type-title" data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel">
+    <h2 id="icon-type-title">Icon type</h2>
+    <p class="aioa-desc">The icon visitors click to open the widget.</p>
+
+    <fieldset class="aioa-fieldset">
+        <legend class="visually-hidden">Select icon type</legend>
+        <div class="aioa-icon-grid">
+            <div class="aioa-icon-option" data-sly-repeat.icon="${model.iconTypes}">
+                <input type="radio" class="aioa-radio" id="${icon.id}" name="aioa_icon_type" value="${icon.value}" checked="${icon.checked}"/>
+                <label for="${icon.id}" class="aioa-icon-label">
+                    <span class="aioa-icon"><img src="${icon.src}" alt="" width="32" height="32" loading="lazy"/></span>
+                    <span class="visually-hidden">Type ${icon.number}</span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</section>

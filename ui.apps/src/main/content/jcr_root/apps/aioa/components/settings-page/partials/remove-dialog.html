@@ -1,0 +1,15 @@
+<!--/*
+  "Remove website" confirmation (native <dialog>, js/setup.js). Removing only takes the website off this
+  console's list (route action removeDomain); the widget and its settings stay with Skynet Technologies.
+*/-->
+<dialog id="remove-dialog" class="aioa-card aioa-dialog" aria-labelledby="remove-title" aria-describedby="remove-desc">
+    <h2 id="remove-title">Remove website?</h2>
+    <p class="aioa-desc" id="remove-desc">Remove <strong id="remove-domain"></strong> from this console? The widget keeps running on
+        the website with its saved settings, and you can add the website again at any time.</p>
+    <p class="aioa-hint" id="remove-unsaved" hidden>Your unsaved changes for this website will be lost.</p>
+    <p class="aioa-error" id="remove-error" hidden></p>
+    <div class="aioa-dialog-actions">
+        <button type="button" class="aioa-btn aioa-btn-danger" id="remove-confirm">Remove</button>
+        <button type="button" class="aioa-btn" id="remove-cancel">Cancel</button>
+    </div>
+</dialog>

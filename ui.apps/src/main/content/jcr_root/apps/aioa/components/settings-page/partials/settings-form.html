@@ -1,0 +1,37 @@
+<!--/*
+  Tabs + widget settings form. Read and filled by js/settings-form.js (+ paid-features.js)
+  and saved by js/save.js. The save bar shows on Appearance Design, and on Paid Features
+  on a paid plan (js/tabs.js).
+*/-->
+<sly data-sly-include="/apps/aioa/components/settings-page/partials/tabs.html"/>
+
+<form id="widget-form" name="widget-form" class="aioa-form" novalidate>
+
+    <!-- Appearance Design -->
+    <div class="aioa-tabpanel" role="tabpanel" id="panel-appearance" aria-labelledby="tab-appearance" tabindex="0">
+        <div class="aioa-columns">
+            <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/color.html"/>
+            <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/widget-size.html"/>
+        </div>
+
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/position.html"/>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/icon-type.html"/>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/icon-size.html"/>
+    </div>
+
+    <!-- Paid Features -->
+    <div class="aioa-tabpanel" role="tabpanel" id="panel-paid" aria-labelledby="tab-paid" tabindex="0" hidden>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/paid-features.html"/>
+    </div>
+
+    <!-- Accessibility Score -->
+    <div class="aioa-tabpanel" role="tabpanel" id="panel-score" aria-labelledby="tab-score" tabindex="0" hidden>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/accessibility-score.html"/>
+    </div>
+
+    <!-- Save bar (Appearance Design, and Paid Features on a paid plan); stays at the bottom of the screen while scrolling -->
+    <div id="save-area">
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/settings/save-bar.html"/>
+    </div>
+
+</form>

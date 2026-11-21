@@ -1,0 +1,24 @@
+<!--/*
+  All in One Accessibility - front-end widget.
+
+  Two ways to use it:
+    1. Page-wide (recommended): include it once in your page component, for example in
+       customfooterlibs.html of a page component based on the Core Components page:
+         <sly data-sly-resource="${'aioa-widget' @ resourceType='aioa/components/widget', decorationTagName=''}"/>
+    2. As an authorable component: allow the "All in One Accessibility" group in the template policy
+       and drop it on a page (or in the footer experience fragment).
+
+  The widget is not loaded in the page editor (edit mode); it loads in preview and on publish.
+  Its appearance comes from the settings saved in Tools > All in One Accessibility.
+*/-->
+<sly data-sly-use.widget="com.skynettechnologies.aem.aioa.core.models.WidgetModel">
+    <div class="cq-placeholder" data-sly-test="${wcmmode.edit}"
+        data-emptytext="All in One Accessibility widget (loads in preview and on publish)"></div>
+
+    <sly data-sly-test="${!wcmmode.edit && widget.enabled}">
+        <div data-aioa-widget data-aioa-src="${widget.scriptUrl}" data-aioa-delay="${widget.delay}" hidden></div>
+        <!--/* Core Components clientlib template: unlike /libs/granite/sightly/templates/clientlib.html it supports async */-->
+        <sly data-sly-use.clientlib="/libs/core/wcm/components/commons/v1/templates/clientlib.html"
+            data-sly-call="${clientlib.js @ categories='aioa.widget', async=true}"/>
+    </sly>
+</sly>

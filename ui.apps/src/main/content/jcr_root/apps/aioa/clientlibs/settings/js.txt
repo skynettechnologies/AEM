@@ -1,0 +1,14 @@
+# Scripts in dependency order (unchanged from the Node.js app's assets/js, except the AEM notes in core.js and app.js)
+#base=js
+core.js
+ui.js
+theme.js
+tabs.js
+plan.js
+paid-features.js
+score.js
+settings-form.js
+save.js
+dashboard.js
+setup.js
+app.js

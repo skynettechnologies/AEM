@@ -1,0 +1,34 @@
+<!--/*
+  "Your website" step (js/setup.js): shown instead of the settings when no website is known yet, and for
+  "Add website". The domain is saved in AEM (route action saveDomain), so it is asked only once. The
+  suggestions are the domains AEM already knows (Sling mappings, Externalizer publish domain).
+*/-->
+<section id="setup_block" class="aioa-card aioa-setup" aria-labelledby="setup-title" hidden
+    data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel">
+    <h2 id="setup-title">Which website is this for?</h2>
+    <p class="aioa-desc" id="setup-desc">Enter the domain your visitors use, for example www.example.com. It is saved in AEM,
+        so you only do this once. The free widget is then registered for this domain with Skynet Technologies.</p>
+
+    <form id="setup-form" novalidate>
+        <label class="aioa-label" for="setup-domain">Website domain</label>
+        <div class="aioa-affix aioa-setup-field" data-for="setup-domain">
+            <span class="aioa-affix-text" aria-hidden="true">https://</span>
+            <input type="text" id="setup-domain" name="url" value="${model.prefillDomain}" placeholder="www.example.com"
+                spellcheck="false" autocomplete="off" autocapitalize="off" aria-describedby="setup-error setup-hint"/>
+        </div>
+        <p class="aioa-error" id="setup-error" hidden></p>
+
+        <div class="aioa-setup-suggestions" data-sly-test="${model.hasSuggestions}">
+            <span class="aioa-hint" id="setup-hint">Found in AEM:</span>
+            <button data-sly-repeat.suggestion="${model.suggestions}" type="button" class="aioa-btn aioa-setup-suggestion"
+                data-setup-domain="${suggestion}">${suggestion}</button>
+        </div>
+        <p class="aioa-hint" data-sly-test="${model.technicalSuggestion}">Addresses ending in .adobeaemcloud.com are AEM's own
+            technical domains. Use your public domain instead when your site has one.</p>
+
+        <div class="aioa-setup-actions">
+            <button type="submit" class="aioa-btn aioa-btn-primary" id="setup-submit">Continue</button>
+            <button type="button" class="aioa-btn" id="setup-cancel" hidden>Cancel</button>
+        </div>
+    </form>
+</section>

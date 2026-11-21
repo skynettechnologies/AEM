@@ -1,0 +1,10 @@
+<!--/*
+  Tabs above the settings (js/tabs.js). Printed in the free plan order; on a paid plan
+  AIOA.tabs.setPlan moves them to Accessibility Score, Paid Features, Appearance Design.
+  The last two show a lock while the website is not on a paid plan.
+*/-->
+<div class="aioa-tabs" role="tablist" aria-label="Settings" data-sly-use.tpl="/apps/aioa/components/settings-page/partials/templates.html">
+    <sly data-sly-call="${tpl.tab @ id='appearance', label='Appearance Design', locked=false, first=true}"/>
+    <sly data-sly-call="${tpl.tab @ id='paid', label='Paid Features', locked=true, first=false}"/>
+    <sly data-sly-call="${tpl.tab @ id='score', label='Accessibility Score', locked=true, first=false}"/>
+</div>

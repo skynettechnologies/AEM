@@ -1,0 +1,3 @@
+# Runs in <head>, before the first paint: applies the saved light / dark choice
+#base=js
+theme-init.js

@@ -1,0 +1,32 @@
+{
+  "siteDomains": [
+    "$[env:AIOA_SITE_DOMAIN;default=]"
+  ],
+  "allowedGroups": [
+    "administrators"
+  ],
+  "platform": "AEM",
+  "apiBase": "https://ada.skynettechnologies.us/api/",
+  "userAgent": "AIOA-Settings/1.0",
+  "widgetSettingsApi": "https://freeada.skynettechnologies.com/api/widget-settings",
+  "checkWebsiteApi": "https://ada.skynettechnologies.us/check-website",
+  "geoApi": "https://ipapi.co/json",
+  "upgradeUrl": "https://ada.skynettechnologies.us/trial-subscription",
+  "companyName": "$[env:AIOA_COMPANY_NAME;default=]",
+  "httpTimeout": 30,
+  "scanApi": "https://skynetaccessibilityscan.com/api/ada-scanner/domain/details",
+  "scanLang": "en",
+  "defaultColor": "420083",
+  "widgetEnabled": true,
+  "widgetScriptUrl": "https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js",
+  "widgetLoadDelay": 3000,
+  "autoInjectEnabled": true,
+  "autoInjectPaths": [
+    "/content"
+  ],
+  "autoInjectExcludedPaths": [
+    "/content/dam",
+    "/content/experience-fragments",
+    "/content/cq:tags"
+  ]
+}

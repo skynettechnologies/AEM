@@ -1,0 +1,37 @@
+<!--/*
+  Settings > Widget size: size of the panel that opens when visitors click the icon.
+    Regular Size (widget_size = 0) - 2 columns of feature tiles
+    Oversize     (widget_size = 1) - 3 columns of feature tiles
+*/-->
+<section class="aioa-card" aria-labelledby="widget-size-title">
+    <h2 id="widget-size-title">Widget size</h2>
+    <p class="aioa-desc">Size of the panel that opens on your website.</p>
+
+    <fieldset class="aioa-fieldset">
+        <legend class="visually-hidden">Select widget size</legend>
+        <div class="aioa-size-options">
+            <label class="aioa-choice aioa-size-choice" for="edit-widget-size-regularsize">
+                <!-- Outline of the open widget panel: header, statement bar, feature tiles -->
+                <span class="aioa-panel is-regular" aria-hidden="true">
+                    <span class="aioa-panel-head"></span>
+                    <span class="aioa-panel-grid"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                </span>
+                <span class="aioa-choice-text">
+                    <input type="radio" id="edit-widget-size-regularsize" name="widget_size" value="0" checked/>
+                    Regular Size
+                </span>
+            </label>
+            <label class="aioa-choice aioa-size-choice" for="edit-widget-size-oversize">
+                <span class="aioa-panel is-over" aria-hidden="true">
+                    <span class="aioa-panel-head"></span>
+                    <span class="aioa-panel-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                </span>
+                <span class="aioa-choice-text">
+                    <input type="radio" id="edit-widget-size-oversize" name="widget_size" value="1" aria-describedby="widget-size-note"/>
+                    Oversize
+                </span>
+            </label>
+        </div>
+    </fieldset>
+    <p class="aioa-hint" id="widget-size-note">Oversize only works on desktop view.</p>
+</section>

@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "aioa.core:domain-store=[aioa-domain-store]"
+  ]
+}

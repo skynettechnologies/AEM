@@ -1,0 +1,72 @@
+<!--/*
+  Paid Features > Widget position for mobile. Same layout as Appearance Design > Widget position,
+  with phone-shaped glyphs and a "Mobile view" preview in the center cell.
+    is_mobile_position                switch: use a separate position on phones
+    is_widget_custom_position_mobile  "Set an exact position in pixels": 0 = presets, 1 = offsets
+    widget_position_mobile            preset position
+*/-->
+<section class="aioa-card" aria-labelledby="mobile-position-title" data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel">
+    <div class="aioa-switch-head">
+        <input type="checkbox" role="switch" class="aioa-switch" id="is_mobile_position" name="is_mobile_position" value="1" aria-controls="mobile-position-body"/>
+        <h2 id="mobile-position-title"><label for="is_mobile_position">Widget position for mobile</label></h2>
+    </div>
+
+    <div id="mobile-position-body" hidden>
+
+        <!-- Preset grid <-> exact offsets -->
+        <label class="aioa-check">
+            <input type="checkbox" id="custom-position-mobile-switcher" aria-controls="mobile-custom mobile-preset"/>
+            Set an exact position in pixels
+        </label>
+
+        <!-- Preset positions -->
+        <fieldset class="aioa-fieldset widget-position" id="mobile-preset">
+            <legend class="visually-hidden">Widget icon position on mobile</legend>
+            <div class="aioa-pos-grid">
+                <sly data-sly-list.pos="${model.mobilePositions}">
+                    <!-- Center cell: mini website with the icon at the selected mobile position -->
+                    <div class="aioa-pos-center" aria-hidden="true" data-sly-test="${pos.center}">
+                        <span class="aioa-mini-label">Mobile view</span>
+                        <span class="aioa-mini-widget" id="mini-widget-mobile" style="--gx:1;--gy:1"><img class="iconimg" src="${model.iconBase}aioa-icon-type-1.svg" alt=""/></span>
+                    </div>
+                    <div class="aioa-pos-option" data-sly-test="${!pos.center}">
+                        <input type="radio" class="aioa-radio" id="${pos.id}" name="position_mobile" value="${pos.value}" data-gx="${pos.gx}" data-gy="${pos.gy}" checked="${pos.checked}"/>
+                        <label for="${pos.id}" class="aioa-pos-label">
+                            <span class="aioa-glyph is-phone" style="--gx:${pos.gx @ context='styleToken'};--gy:${pos.gy @ context='styleToken'}" aria-hidden="true"><i></i></span>
+                            ${pos.label}
+                        </label>
+                    </div>
+                </sly>
+            </div>
+        </fieldset>
+
+        <!-- Exact offsets -->
+        <div class="aioa-subpanel" id="mobile-custom" hidden>
+            <div class="aioa-offset-row">
+                <label class="aioa-label" for="mobile_x_value">Horizontal</label>
+                <div class="aioa-affix" data-for="mobile_x_value">
+                    <input type="number" min="0" max="250" step="1" inputmode="numeric" id="mobile_x_value" value="0" aria-describedby="mobile-range-hint mobile-pos-error"/>
+                    <span class="aioa-affix-text" aria-hidden="true">px</span>
+                </div>
+                <select class="aioa-select" id="mobile_x_dir" aria-label="Horizontal direction (mobile)">
+                    <option value="left">To the left</option>
+                    <option value="right" selected>To the right</option>
+                    <option value="center">Center</option>
+                </select>
+            </div>
+            <div class="aioa-offset-row">
+                <label class="aioa-label" for="mobile_y_value">Vertical</label>
+                <div class="aioa-affix" data-for="mobile_y_value">
+                    <input type="number" min="0" max="250" step="1" inputmode="numeric" id="mobile_y_value" value="0" aria-describedby="mobile-range-hint mobile-pos-error"/>
+                    <span class="aioa-affix-text" aria-hidden="true">px</span>
+                </div>
+                <select class="aioa-select" id="mobile_y_dir" aria-label="Vertical direction (mobile)">
+                    <option value="top">To the top</option>
+                    <option value="bottom" selected>To the bottom</option>
+                </select>
+            </div>
+            <p class="aioa-hint" id="mobile-range-hint">0 - 250px are permitted values</p>
+            <p class="aioa-error" id="mobile-pos-error" hidden></p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Widget Settings"
+    jcr:description="Color, position, icon, paid features and accessibility score"
+    href="/apps/aioa/content/settings.html"
+    icon="/etc.clientlibs/aioa/clientlibs/settings/resources/images/aioa-logo.svg"
+    id="aioa-settings"
+    target="_blank"/>

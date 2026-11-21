@@ -1,0 +1,12 @@
+<!--/*
+  Paid Features tab (js/paid-features.js), saved together with the Appearance Design settings
+  (paid plans only). Free plan: blurred and inert, with the upgrade overlay on top.
+*/-->
+<div class="aioa-lockable" data-sly-use.tpl="/apps/aioa/components/settings-page/partials/templates.html">
+    <div class="aioa-lock-content aioa-stack">
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/paid/mobile-position.html"/>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/paid/links.html"/>
+        <sly data-sly-include="/apps/aioa/components/settings-page/partials/paid/toggles.html"/>
+    </div>
+    <sly data-sly-call="${tpl.lock @ lockId='paid-lock', lockMod=''}"/>
+</div>

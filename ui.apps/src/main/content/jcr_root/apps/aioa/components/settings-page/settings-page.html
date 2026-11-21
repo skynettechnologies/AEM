@@ -1,0 +1,65 @@
+<!--/*
+  All in One Accessibility - settings console (AEM port of views/layout.ejs)
+
+  Opened from Tools > All in One Accessibility, or directly:
+    /apps/aioa/content/settings.html?url=www.example.com
+  Optional query parameters: url, username, email, theme (light | dark).
+
+  The model (SettingsPageModel) replaces GET / in server.js: it reads the query string, the
+  OSGi configuration and the signed-in user, and prints the boot data for clientlib js/core.js.
+*/-->
+<!doctype html>
+<html lang="en" data-sly-use.model="com.skynettechnologies.aem.aioa.core.models.SettingsPageModel"
+    data-theme="${model.theme}">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="All in One Accessibility widget settings">
+    <title>All in One Accessibility Settings</title>
+    <sly data-sly-test="${model.allowed}" data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+        <!--/* Applies the saved light / dark choice before the first paint (no flash) */-->
+        <sly data-sly-call="${clientlib.js @ categories='aioa.settings.head'}"/>
+        <sly data-sly-call="${clientlib.css @ categories='aioa.settings'}"/>
+    </sly>
+</head>
+<body>
+    <sly data-sly-test.denied="${!model.allowed}">
+        <main style="font-family:system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 20px">
+            <h1>All in One Accessibility</h1>
+            <p>You don't have access to the accessibility settings. Ask an AEM administrator to add you to one of the
+                groups in the OSGi configuration "All in One Accessibility - Settings" (Allowed groups).</p>
+        </main>
+    </sly>
+
+    <sly data-sly-test="${!denied}">
+        <div class="aioa-page">
+            <sly data-sly-include="partials/header.html"/>
+
+            <main>
+                <sly data-sly-include="partials/status.html"/>
+                <sly data-sly-include="partials/setup.html"/>
+                <sly data-sly-include="partials/remove-dialog.html"/>
+
+                <!-- Settings (shown once loading has finished) -->
+                <div id="settings_block" hidden>
+                    <sly data-sly-include="partials/upgrade-banner.html"/>
+                    <sly data-sly-include="partials/paid-banner.html"/>
+                    <sly data-sly-include="partials/site-strip.html"/>
+                    <sly data-sly-include="partials/settings-form.html"/>
+                </div>
+            </main>
+        </div>
+
+        <!-- Toast notifications (js/ui.js) -->
+        <div class="aioa-toasts" id="toasts" aria-live="polite"></div>
+
+        <!-- Boot data for the scripts (escaped by SettingsPageModel: <, >, & and ') -->
+        <script id="aioa-boot" type="application/json">${model.bootJson @ context='unsafe'}</script>
+
+        <!-- Scripts in dependency order (see the clientlib's js.txt); at the end of <body>, so the DOM is ready -->
+        <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+            data-sly-call="${clientlib.js @ categories='aioa.settings'}"/>
+    </sly>
+</body>
+</html>

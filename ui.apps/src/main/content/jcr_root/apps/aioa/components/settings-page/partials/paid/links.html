@@ -1,0 +1,39 @@
+<!--/*
+  Paid Features > custom links shown in the widget
+    statement_link       custom accessibility statement page
+    report_problem_link  custom "report a problem" page
+  Empty is allowed; otherwise a full http(s) link (js/paid-features.js).
+*/-->
+<section class="aioa-card" aria-labelledby="statement_link-title">
+    <h2 class="aioa-feature-title" id="statement_link-title">
+        <span class="aioa-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h8M9 12h8M9 17h8"/><circle cx="5.5" cy="7" r=".6" fill="currentColor"/><circle cx="5.5" cy="12" r=".6" fill="currentColor"/><circle cx="5.5" cy="17" r=".6" fill="currentColor"/></svg>
+        </span>
+        <label for="statement_link">Enter custom accessibility statement link</label>
+    </h2>
+    <div class="aioa-affix aioa-link-input" data-for="statement_link">
+        <span class="aioa-affix-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+        </span>
+        <input type="url" id="statement_link" name="statement_link" inputmode="url" autocomplete="off" spellcheck="false"
+            placeholder="https://www.yourwebsite.com/accessibility-statement" aria-describedby="statement_link-error"/>
+    </div>
+    <p class="aioa-error" id="statement_link-error" hidden></p>
+</section>
+
+<section class="aioa-card" aria-labelledby="report_problem_link-title">
+    <h2 class="aioa-feature-title" id="report_problem_link-title">
+        <span class="aioa-feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg>
+        </span>
+        <label for="report_problem_link">Enter custom report a problem link</label>
+    </h2>
+    <div class="aioa-affix aioa-link-input" data-for="report_problem_link">
+        <span class="aioa-affix-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+        </span>
+        <input type="url" id="report_problem_link" name="report_problem_link" inputmode="url" autocomplete="off" spellcheck="false"
+            placeholder="https://www.yourwebsite.com/report-a-problem" aria-describedby="report_problem_link-error"/>
+    </div>
+    <p class="aioa-error" id="report_problem_link-error" hidden></p>
+</section>

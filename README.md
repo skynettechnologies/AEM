@@ -68,7 +68,7 @@ English (USA), English (UK), English (Australian), English (Canadian), English (
 
 ## Prerequisites
 
-* Adobe Experience Manager as a Cloud Service, or the AEM as a Cloud Service SDK (version 2025.10 or newer) for local development
+* Adobe Experience Manager as a Cloud Service, or the AEM as a Cloud Service SDK (version 2026.10 or newer) for local development
 * Cloud Service: access to Cloud Manager (Deployment Manager role) to deploy the package
 * Local SDK: access to AEM Package Manager
 * Not supported: AEM 6.x on-premise / Managed Services
@@ -129,18 +129,6 @@ OSGi configuration **All in One Accessibility - Settings** (on AEM as a Cloud Se
 
 Advanced settings (accessibility statement link, alt-text editing, team management, analytics) are managed from the [accessibility dashboard](https://ada.skynettechnologies.us/front/login).
 
-## Configuration
-
-After the package is installed and your plan is active, configure the app from the accessibility dashboard.
-
-**Steps:**
-
-1. Log in to the [accessibility dashboard](https://ada.skynettechnologies.us/front/login).
-2. Open **Widget Settings** for your AEM website.
-3. Configure options (color, icon type, position, size, etc.).
-4. Save your changes.
-
-Advanced settings (accessibility statement link, alt-text editing, team management, analytics) are managed from the [accessibility dashboard](https://ada.skynettechnologies.us/front/login).
 
 ## Demo
 

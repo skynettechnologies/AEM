@@ -68,22 +68,66 @@ English (USA), English (UK), English (Australian), English (Canadian), English (
 
 ## Prerequisites
 
-- Adobe Experience Manager 6.3 with Service Pack 2 or above (on-premises), or AEM as a Cloud Service
-- Access to AEM Package Manager
+* Adobe Experience Manager as a Cloud Service, or the AEM as a Cloud Service SDK (version 2025.10 or newer) for local development
+* Cloud Service: access to Cloud Manager (Deployment Manager role) to deploy the package
+* Local SDK: access to AEM Package Manager
+* Not supported: AEM 6.x on-premise / Managed Services
 
 ## Installation
 
-1. Download the **All in One Accessibility** package for Adobe Experience Manager.
-2. In Adobe Experience Manager, go to **Tools → Deployment → Packages**.
-3. Upload the `all-in-one-accessibility.zip` file, select **Force Upload**, and install the package.
-4. Select your **All in One Accessibility** plan, or start the 10-day free trial.
-5. Verify that the All in One Accessibility widget is visible on your site.
+Download `all-in-one-accessibility.zip` from the [latest release](https://github.com/skynettechnologies/AEM/releases).
 
-Package name: `all-in-one-accessibility.zip`
+### AEM as a Cloud Service
 
-For a detailed walkthrough, see the [**Adobe Experience Manager accessibility app installation guide**](https://www.skynettechnologies.com/blog/adobe-experience-manager-web-accessibility-widget-installation).
+On AEM as a Cloud Service, code is deployed through Cloud Manager (Package Manager cannot install code there). Add the package to your AEM project once:
 
+1. Copy `all-in-one-accessibility.zip` into your project's `all` module:
+   `all/src/main/content/jcr_root/apps/<your-project>-vendor-packages/container/install/`
+2. Make sure `all/src/main/content/META-INF/vault/filter.xml` contains:
+   ```xml
+   <filter root="/apps/<your-project>-vendor-packages"/>
+   ```
+3. Commit, push to your Cloud Manager Git repository, and run the deployment pipeline.
+
+### Local AEM SDK (development and testing)
+
+1. In AEM, go to **Tools → Deployment → Packages** (on author and on publish).
+2. Click **Upload Package**, choose `all-in-one-accessibility.zip`, select **Force Upload**, and click **Install**.
+
+### After installation
+
+1. **The widget is added to your site automatically**: every page under `/content` gets it, with no template or page changes. Flush the Dispatcher / CDN cache once after the deployment.
+2. Open **Tools → All in One Accessibility → Widget Settings**. Your website domain is detected automatically, and the free widget is registered for it.
+3. Select your All in One Accessibility plan, or start the 10-day free trial with **Upgrade to Paid Plan** (the trial form is pre-filled with your website and AEM user details).
+4. Open a published page and verify that the All in One Accessibility widget appears (bottom right, after about 3 seconds). Press **Ctrl + Shift + A** to open it.
+
+For a detailed walkthrough, see the [Adobe Experience Manager accessibility app installation guide](https://www.skynettechnologies.com/blog/adobe-experience-manager-web-accessibility-widget-installation).
 Need help? Our support team can assist with the integration if you don't have a development team.
+
+## Configuration
+
+Configure the widget inside AEM:
+
+1. Go to **Tools → All in One Accessibility → Widget Settings**.
+2. Choose the widget color, icon type, icon size, widget size and position (preset or exact position in pixels).
+3. Click **Save Changes**. The widget on your website updates within a few seconds.
+
+Paid plans also unlock the **Paid Features** and **Accessibility Score** tabs, and a **Dashboard** button that opens the accessibility dashboard.
+
+### Optional AEM settings
+
+OSGi configuration **All in One Accessibility - Settings** (on AEM as a Cloud Service, set the environment variables in Cloud Manager):
+
+| Setting | Environment variable | Purpose |
+|---|---|---|
+| Site domains | `AIOA_SITE_DOMAIN` | Your public website domain, if it is not detected automatically |
+| Company name | `AIOA_COMPANY_NAME` | Sent with the registration and the trial form |
+| Add widget to pages automatically | – | On by default; turn off to place the widget component manually |
+| Automatic: include / excluded paths | – | Limit the widget to certain sites, e.g. `/content/mysite` |
+| Widget enabled | – | Master switch for the widget |
+| Allowed groups | – | Who may open Widget Settings (default: `administrators`) |
+
+Advanced settings (accessibility statement link, alt-text editing, team management, analytics) are managed from the [accessibility dashboard](https://ada.skynettechnologies.us/front/login).
 
 ## Configuration
 
